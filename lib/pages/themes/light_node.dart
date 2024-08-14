@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-ThemeData lightMode = ThemeData();
+ThemeData lightMode = ThemeData(colorScheme: ColorScheme.light());
