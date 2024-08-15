@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Habit Tracker',
-      home: MyHomePage(),
+      home: const MyHomePage(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
