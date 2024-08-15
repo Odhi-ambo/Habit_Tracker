@@ -17,9 +17,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Habit Tracker',
       home: MyHomePage(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
