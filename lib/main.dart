@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Habit Tracker',
       home: const MyHomePage(),
       theme: Provider.of<ThemeProvider>(context).themeData,
