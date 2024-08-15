@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:habit_tracker/pages/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -12,7 +15,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        child: Center(
+          child: CupertinoSwitch(
+            value: Provider.of<ThemeProvider>(context).isLightMode,
+            onChanged: (value) =>
+                Provider.of<ThemeProvider>(context, listen: false).toggle(),
+          ),
+        ),
+      ),
     );
   }
 }
