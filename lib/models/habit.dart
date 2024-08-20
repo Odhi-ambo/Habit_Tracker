@@ -8,5 +8,9 @@ class Habit {
   late String name;
 
   //completed days
-  List<DateTime> completedDays = [];
+  List<DateTime> completedDays = [
+    // DateTime(year, month, day),
+    // DateTime(2024, 8, 19),
+    // DateTime(2024,8, 19),
+  ];
 }
