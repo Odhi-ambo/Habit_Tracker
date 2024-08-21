@@ -19,3 +19,6 @@ Future<void> initialize() async {
     directory: dir.path,
   );
 }
+
+//save first date of app when starting for the first time
+Future<void> saveFirstLaunchDate() async {}
