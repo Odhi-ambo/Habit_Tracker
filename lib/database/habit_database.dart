@@ -24,5 +24,8 @@ setup
 //save first date of app when starting for the first time
   Future<void> saveFirstLaunchDate() async {
     final existingSettings = await isar.appSettings.where().findFirst();
+    if (existingSettings == null) {
+      final settings = AppSettings()..firstLaunchDate = DateTime.now();
+    }
   }
 }
