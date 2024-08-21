@@ -4,7 +4,8 @@ import 'package:habit_tracker/models/habit.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 
-class HabitDatabase extends ChangeNotifier {}
+class HabitDatabase extends ChangeNotifier {
+  static late Isar isar;
 
 /*
 setup
@@ -12,13 +13,16 @@ setup
 */
 
 //INITIALIZE DB
-Future<void> initialize() async {
-  final dir = await getApplicationDocumentsDirectory();
-  isar = await Isar.open(
-    [HabitSchema, AppSettingsSchema],
-    directory: dir.path,
-  );
-}
+  Future<void> initialize() async {
+    final dir = await getApplicationDocumentsDirectory();
+    isar = await Isar.open(
+      [HabitSchema, AppSettingsSchema],
+      directory: dir.path,
+    );
+  }
 
 //save first date of app when starting for the first time
-Future<void> saveFirstLaunchDate() async {}
+  Future<void> saveFirstLaunchDate() async {
+    final existingSettings = await isar.appSettings.where().findFirst();
+  }
+}
