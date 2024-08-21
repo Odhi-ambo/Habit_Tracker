@@ -26,6 +26,7 @@ setup
     final existingSettings = await isar.appSettings.where().findFirst();
     if (existingSettings == null) {
       final settings = AppSettings()..firstLaunchDate = DateTime.now();
+      await isar.writeTxn(() => isar.appSettings.put(settings));
     }
   }
 }
