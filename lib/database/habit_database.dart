@@ -33,5 +33,6 @@ setup
   //get first date of app during startup(for heatmap)
   Future<DateTime?> getFirstLaunchDate() async {
     final settings = await isar.appSettings.where().findFirst();
+    return settings?.firstLaunchDate;
   }
 }
