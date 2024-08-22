@@ -13,7 +13,7 @@ setup
 */
 
 //INITIALIZE DB
-  Future<void> initialize() async {
+  static Future<void> initialize() async {
     final dir = await getApplicationDocumentsDirectory();
     isar = await Isar.open(
       [HabitSchema, AppSettingsSchema],
