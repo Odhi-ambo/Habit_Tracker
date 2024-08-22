@@ -41,4 +41,7 @@ setup
   */
   //list of habit
   final List<Habit> currentHabits = [];
+
+  //CREATE- add a new habit
+  Future<void> addHabit(String habitName) async {}
 }
