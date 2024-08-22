@@ -3,7 +3,9 @@ import 'package:habit_tracker/pages/my_home_page.dart';
 import 'package:habit_tracker/pages/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  //initialize db
+  WidgetsFlutterBinding();
   runApp(
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
