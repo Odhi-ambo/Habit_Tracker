@@ -49,5 +49,11 @@ setup
 
     //save to DB
     await isar.writeTxn(() => isar.habits.put(newHabit));
+
+    //re-read from DB
+    readHabits();
   }
+
+//READ- read saved habits from DB
+  Future<void> readHabits() async {}
 }
