@@ -46,5 +46,8 @@ setup
   Future<void> addHabit(String habitName) async {
     //create a new habit
     final newHabit = Habit()..name = habitName;
+
+    //save to DB
+    await isar.writeTxn(() => isar.habits.put(newHabit));
   }
 }
