@@ -35,4 +35,8 @@ setup
     final settings = await isar.appSettings.where().findFirst();
     return settings?.firstLaunchDate;
   }
+  /*
+  c r u d ops
+  */
+  //list of habit
 }
