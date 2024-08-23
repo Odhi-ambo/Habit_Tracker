@@ -58,5 +58,9 @@ setup
   Future<void> readHabits() async {
     //fetch all habits from db
     List<Habit> fetchedHabits = await isar.habits.where().findAll();
+
+    //give to current habits
+    currentHabits.clear();
+    currentHabits.addAll(fetchedHabits);
   }
 }
