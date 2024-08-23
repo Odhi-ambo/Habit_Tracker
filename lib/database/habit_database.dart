@@ -65,5 +65,12 @@ setup
 
     //update UI
     notifyListeners();
+
+    //UPDATE - check habit on and off
+
+    Future<void> updateHabitCompletion(int id, bool isCompleted) async {
+      //find the specific habit
+      final habit = await isar.habits.get(id);
+    }
   }
 }
