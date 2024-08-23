@@ -55,5 +55,8 @@ setup
   }
 
 //READ- read saved habits from DB
-  Future<void> readHabits() async {}
+  Future<void> readHabits() async {
+    //fetch all habits from db
+    List<Habit> fetchedHabits = await isar.habits.where().findAll();
+  }
 }
