@@ -90,11 +90,12 @@ setup
           //if habit is not completed  -> remove the current date from the list
           else {
             //remove the current date if the habit is marked as not completed
-            habit.completedDays.removeWhere{(date) =>
-            date.year == DateTime.now().year &&
-            date.month == DateTime.now().month &&
-            date.day == DateTime.now().day,
-            
+            habit.completedDays.removeWhere(
+              (date) =>
+                  date.year == DateTime.now().year &&
+                  date.month == DateTime.now().month &&
+                  date.day == DateTime.now().day,
+            );
           }
         });
       }
