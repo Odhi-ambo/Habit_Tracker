@@ -71,6 +71,13 @@ setup
     Future<void> updateHabitCompletion(int id, bool isCompleted) async {
       //find the specific habit
       final habit = await isar.habits.get(id);
+
+      //update completion status
+      if (habit != null) {
+        // await isar.writeTxn() async{
+        //if habit is completed -> add the current date to the completed days list
+      }
+      ;
     }
   }
 }
