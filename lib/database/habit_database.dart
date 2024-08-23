@@ -74,10 +74,18 @@ setup
 
       //update completion status
       if (habit != null) {
-        // await isar.writeTxn() async{
-        //if habit is completed -> add the current date to the completed days list
+        await isar.writeTxn(() async {
+          //if habit is completed -> add the current date to the completed days list
+          if (isCompleted && !habit.completedDays.contains(DateTime.now())) {
+          }
+          //if habit is not completed  -> remove the current date from the list
+          else {}
+        });
       }
-      ;
+      //re -read from db
     }
+    //UPDATE- update habit
+
+    //DELETE-delete habit
   }
 }
