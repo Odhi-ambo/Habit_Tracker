@@ -117,6 +117,8 @@ setup
           await isar.habits.put(habit);
         });
       }
+      //re read habits from db
+      readHabits();
     }
 
     //DELETE-delete habit
