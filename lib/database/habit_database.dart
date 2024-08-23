@@ -62,5 +62,8 @@ setup
     //give to current habits
     currentHabits.clear();
     currentHabits.addAll(fetchedHabits);
+
+    //update UI
+    notifyListeners();
   }
 }
