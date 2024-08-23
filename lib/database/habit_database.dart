@@ -1,3 +1,5 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/models/app_settings.dart';
 import 'package:habit_tracker/models/habit.dart';
@@ -78,7 +80,12 @@ setup
           //if habit is completed -> add the current date to the completed days list
           if (isCompleted && !habit.completedDays.contains(DateTime.now())) {
             //today
-            final habit = DateTime.now();
+            final today = DateTime.now();
+
+            //add the current date if it's not already on the list
+            habit.completedDays.add(
+              DateTime(today.year, today.month, today.day),
+            );
           }
           //if habit is not completed  -> remove the current date from the list
           else {}
