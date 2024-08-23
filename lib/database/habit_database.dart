@@ -1,5 +1,3 @@
-import 'dart:js_interop';
-
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/models/app_settings.dart';
 import 'package:habit_tracker/models/habit.dart';
@@ -97,6 +95,8 @@ setup
                   date.day == DateTime.now().day,
             );
           }
+          //save the updated habits to the db
+          await isar.habits.put(habit);
         });
       }
       //re -read from db
