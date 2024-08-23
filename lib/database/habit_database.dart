@@ -107,6 +107,16 @@ setup
     Future<void> updateHabitName(int id, String newName) async {
       //find the specific habit
       final habit = await isar.habits.get(id);
+
+      //update habit name
+      if (habit != null) {
+        //update name
+        await isar.writeTxn(() async {
+          habit.name = newName;
+          //save updated habit back to the db
+          await isar.habits.put(habit);
+        });
+      }
     }
 
     //DELETE-delete habit
