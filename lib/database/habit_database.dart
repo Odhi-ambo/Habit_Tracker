@@ -100,8 +100,14 @@ setup
         });
       }
       //re -read from db
+      readHabits();
     }
+
     //UPDATE- update habit
+    Future<void> updateHabitName(int id, String newName) async {
+      //find the specific habit
+      final habit = await isar.habits.get(id);
+    }
 
     //DELETE-delete habit
   }
