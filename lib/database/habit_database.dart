@@ -124,7 +124,9 @@ setup
     //DELETE-delete habit
     Future<void> deleteHabitName(int id) async {
       //perform the delete
-      await isar.writeTxn(() async {});
+      await isar.writeTxn(() async {
+        await isar.habits.delete(id);
+      });
     }
   }
 }
