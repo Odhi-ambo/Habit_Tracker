@@ -15,7 +15,8 @@ void main() async {
 
     //theme provider
     ChangeNotifierProvider(create: (context) => ThemeProvider())
-  ]));
+  ],
+  child: MyApp(),));
 }
 
 class MyApp extends StatelessWidget {
