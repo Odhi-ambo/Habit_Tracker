@@ -12,6 +12,9 @@ void main() async {
   runApp(MultiProvider(providers: [
     //habit provider]
     ChangeNotifierProvider(create: (context) => HabitDatabase()),
+
+    //theme provider
+    ChangeNotifierProvider(create: (context) => ThemeProvider())
   ]));
 }
 
