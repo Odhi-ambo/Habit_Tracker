@@ -128,5 +128,8 @@ setup
         await isar.habits.delete(id);
       });
     }
+
+    //re-read habits
+    readHabits();
   }
 }
