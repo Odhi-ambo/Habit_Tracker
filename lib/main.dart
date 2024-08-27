@@ -9,12 +9,10 @@ void main() async {
   //initialize db
   await HabitDatabase.initialize();
   await HabitDatabase().saveFirstLaunchDate();
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: const MyApp(),
-    ),
-  );
+  runApp(MultiProvider(providers: [
+    //habit provider]
+    ChangeNotifierProvider(create: (context) => HabitDatabase()),
+  ]));
 }
 
 class MyApp extends StatelessWidget {
