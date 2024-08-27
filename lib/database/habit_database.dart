@@ -122,5 +122,9 @@ setup
     }
 
     //DELETE-delete habit
+    Future<void> deleteHabitName(int id)async{
+      
+      
+    }
   }
 }
