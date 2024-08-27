@@ -15,17 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: Drawer(
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        child: Center(
-          child: CupertinoSwitch(
-            value: Provider.of<ThemeProvider>(context).isLightMode,
-            onChanged: (value) =>
-                Provider.of<ThemeProvider>(context, listen: false)
-                    .toggleTheme(),
-          ),
-        ),
-      ),
+      drawer: Drawer(),
     );
   }
 }
