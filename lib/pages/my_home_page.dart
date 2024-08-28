@@ -8,6 +8,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  //create habit
+  void createNewHabit() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(),
       drawer: const Drawer(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: createNewHabit,
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.tertiary,
         child: const Icon(
