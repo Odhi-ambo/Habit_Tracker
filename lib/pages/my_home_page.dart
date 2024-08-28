@@ -16,6 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: const Drawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.tertiary,
         child: const Icon(
           Icons.add,
