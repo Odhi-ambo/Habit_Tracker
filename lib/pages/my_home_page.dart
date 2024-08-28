@@ -9,7 +9,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   //create habit
-  void createNewHabit() {}
+  void createNewHabit() {
+    showDialog(context: context, builder: (context) => AlertDialog());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
