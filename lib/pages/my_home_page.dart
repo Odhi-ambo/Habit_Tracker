@@ -13,7 +13,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(),
       drawer: Drawer(),
-      floatingActionButton: FloatingActionButton(onPressed: (){}
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
       ),
     );
   }
