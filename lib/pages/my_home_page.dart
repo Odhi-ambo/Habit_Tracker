@@ -9,6 +9,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   //Text Controller
+  final TextEditingController textController = TextEditingController();
   //create habit
   void createNewHabit() {
     showDialog(
