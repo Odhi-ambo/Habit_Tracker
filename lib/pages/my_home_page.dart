@@ -19,7 +19,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 controller: textController,
                 decoration:
                     const InputDecoration(hintText: 'Create a new habit'),
+                    
               ),
+              actions: [
+
+                //save button
+                MaterialButton(onPressed: (){})
+
+
+
+              ],
             ));
   }
 
