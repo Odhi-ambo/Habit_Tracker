@@ -17,7 +17,8 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (context) => AlertDialog(
               content: TextField(
                 controller: textController,
-                decoration: InputDecoration(hintText: 'Create a new habit'),
+                decoration:
+                    const InputDecoration(hintText: 'Create a new habit'),
               ),
             ));
   }
