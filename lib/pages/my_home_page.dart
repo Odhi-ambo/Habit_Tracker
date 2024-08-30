@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:habit_tracker/database/habit_database.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -25,6 +27,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialButton(onPressed: () {
                   //get the new habit
                   String newHabitName = textController.text;
+
+                  //save to db
+                  context.read<HabitDatabase>().addHabit(newHabitName);
                 })
               ],
             ));
