@@ -24,19 +24,22 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               actions: [
                 //save button
-                MaterialButton(onPressed: () {
-                  //get the new habit
-                  String newHabitName = textController.text;
+                MaterialButton(
+                  onPressed: () {
+                    //get the new habit
+                    String newHabitName = textController.text;
 
-                  //save to db
-                  context.read<HabitDatabase>().addHabit(newHabitName);
+                    //save to db
+                    context.read<HabitDatabase>().addHabit(newHabitName);
 
-                  //pop box
-                  Navigator.pop(context);
+                    //pop box
+                    Navigator.pop(context);
 
-                  //clear textcontroller
-                  textController.clear();
-                })
+                    //clear textcontroller
+                    textController.clear();
+                  },
+                  child: Text('Save'),
+                )
               ],
             ));
   }
