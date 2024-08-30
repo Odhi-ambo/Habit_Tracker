@@ -39,7 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     textController.clear();
                   },
                   child: const Text('Save'),
-                )
+                ),
+                //cancel button
+                MaterialButton(onPressed: () {
+                  //pop the box
+                  Navigator.pop(context);
+
+                  //clear controller
+                  textController.clear();
+                })
               ],
             ));
   }
