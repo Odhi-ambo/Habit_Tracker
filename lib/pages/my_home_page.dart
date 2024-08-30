@@ -17,6 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (context) => AlertDialog(
               content: TextField(
                 controller: textController,
+                decoration: InputDecoration(),
               ),
             ));
   }
