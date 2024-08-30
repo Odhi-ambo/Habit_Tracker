@@ -30,6 +30,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
                   //save to db
                   context.read<HabitDatabase>().addHabit(newHabitName);
+
+                  //pop box
+                  Navigator.pop(context);
+
+                  //clear textcontroller
+                  textController.clear();
                 })
               ],
             ));
