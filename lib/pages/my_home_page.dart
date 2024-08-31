@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     //clear controller
                     textController.clear();
                   },
-                  child: Text('Cancel'),
+                  child: const Text('Cancel'),
                 )
               ],
             ));
