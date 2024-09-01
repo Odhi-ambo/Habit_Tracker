@@ -14,6 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     //read existing habitson app startup
     Provider.of<HabitDatabase>(context, listen: false).readHabits();
+    super.initState();
   }
 
   //Text Controller
