@@ -13,7 +13,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     //read existing habitson app startup
+    Provider.of<HabitDatabase>(context, listen: false).readHabits();
   }
+
   //Text Controller
   final TextEditingController textController = TextEditingController();
   //create habit
