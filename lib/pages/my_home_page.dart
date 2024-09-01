@@ -10,6 +10,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState(){}
   //Text Controller
   final TextEditingController textController = TextEditingController();
   //create habit
