@@ -89,6 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
     List<Habit> currentHabits = habitDatabase.currentHabits;
 
     //return lists of habits UI
-    return ListView.builder(itemBuilder: (context, index) {});
+    return ListView.builder(itemBuilder: (context, index) {
+      //get each individual habit
+
+      //check if the habit is completed today
+
+      //return habit tile UI
+    });
   }
 }
