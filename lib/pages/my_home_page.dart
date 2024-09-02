@@ -87,5 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     //current habits
     List<Habit> currentHabits = habitDatabase.currentHabits;
+
+    //return lists of habits UI
+    return ListView.builder(itemBuilder: (context, index) {});
   }
 }
