@@ -13,7 +13,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
-    //read existing habitson app startup
+    //read existing habits on app startup
     Provider.of<HabitDatabase>(context, listen: false).readHabits();
     super.initState();
   }
@@ -81,20 +81,25 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+//build habit list
   Widget _buildHabitList() {
     //habit db
-    final habitDatabase = context.watch<HabitDatase>();
+    final habitDatabase = context.watch<HabitDatabase>();
 
     //current habits
     List<Habit> currentHabits = habitDatabase.currentHabits;
 
     //return lists of habits UI
-    return ListView.builder(itemBuilder: (context, index) {
-      //get each individual habit
+    return ListView.builder(
+        itemCount: currentHabits.length,
+        itemBuilder: (context, index) {
+          //get each individual habit
+          final habit = currentHabits[index];
 
-      //check if the habit is completed today
+          //check if the habit is completed today
+          bool isCompletedToday = isHabitCompletedToday();
 
-      //return habit tile UI
-    });
+          //return habit tile UI
+        });
   }
 }
