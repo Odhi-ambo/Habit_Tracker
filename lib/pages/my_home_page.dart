@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/database/habit_database.dart';
+import 'package:habit_tracker/models/habit.dart';
 import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -78,11 +79,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: _buildHabitList,
     );
+  }
 
-    widget _buildHabitList() {
-      //habit db
+  Widget _buildHabitList() {
+    //habit db
+    final habitDatabase = context.watch<HabitDatase>();
 
-      //current habits
-    }
+    //current habits
+    List<Habit> currentHabits = habitDatabase.currentHabits;
   }
 }
