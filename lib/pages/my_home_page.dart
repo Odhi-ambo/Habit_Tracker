@@ -76,6 +76,13 @@ class _MyHomePageState extends State<MyHomePage> {
           Icons.add,
         ),
       ),
+      body: _buildHabitList,
     );
+
+    widget _buildHabitList() {
+      //habit db
+
+      //current habits
+    }
   }
 }
