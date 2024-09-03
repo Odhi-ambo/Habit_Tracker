@@ -65,6 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ));
   }
 
+//check habit on and off
+  void checkHabitOnOff(bool? value, Habit habit) {
+    //update habit completion status
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,7 +106,11 @@ class _MyHomePageState extends State<MyHomePage> {
           bool isCompletedToday = isHabitCompletedToday(habit.completedDays);
 
           //return habit tile UI
-          return MyHabitTile(text: habit.name, isCompleted: isCompletedToday);
+          return MyHabitTile(
+            text: habit.name,
+            isCompleted: isCompletedToday,
+            onChanged: (value) => checkHabitOnOff(value),
+          );
         });
   }
 }
