@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class MyHabitTile extends StatelessWidget {
   final bool isCompleted;
   final text;
-  const MyHabitTile({super.key, required this.isCompleted, required this.text});
+  final void Function(bool?)? onChanged;
+  const MyHabitTile({super.key, required this.isCompleted, required this.text, required this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,10 @@ class MyHabitTile extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
         child: ListTile(
           title: Text(text),
+          leading: Checkbox(
+            value: isCompleted,
+            onChanged: onChanged,
+          ),
         ));
   }
 }
