@@ -12,8 +12,8 @@ class MyHabitTile extends StatelessWidget {
           color: isCompleted
               ? Colors.green
               : Theme.of(context).colorScheme.secondary),
-      padding: EdgeInsets.all(12),
-      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
+      padding: const EdgeInsets.all(12),
+      margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
       child: Text(text),
     );
   }
