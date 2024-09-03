@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class MyHabitTile extends StatelessWidget {
-  const MyHabitTile({super.key});
+  final bool isCompleted;
+  const MyHabitTile({super.key, required this.isCompleted});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      decoration: BoxDecoration(
+          color: isCompleted
+              ? Colors.green
+              : Theme.of(context).colorScheme.secondary),
+    );
   }
 }
