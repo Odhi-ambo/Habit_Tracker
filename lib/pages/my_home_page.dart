@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habit_tracker/components/my_habit_tile.dart';
 import 'package:habit_tracker/database/habit_database.dart';
 import 'package:habit_tracker/models/habit.dart';
 import 'package:habit_tracker/util/habit_util.dart';
@@ -101,9 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
           bool isCompletedToday = isHabitCompletedToday(habit.completedDays);
 
           //return habit tile UI
-          return ListTile(
-            title: Text(habit.name),
-          );
+          return MyHabitTile(text: habit.name, isCompleted: isCompletedToday);
         });
   }
 }
