@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/database/habit_database.dart';
 import 'package:habit_tracker/models/habit.dart';
+import 'package:habit_tracker/util/habit_util.dart';
 import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -97,9 +98,12 @@ class _MyHomePageState extends State<MyHomePage> {
           final habit = currentHabits[index];
 
           //check if the habit is completed today
-          bool isCompletedToday = isHabitCompletedToday();
+          bool isCompletedToday = isHabitCompletedToday(habit.completedDays);
 
           //return habit tile UI
+          return ListTile(
+            title: Text(habit.name),
+          );
         });
   }
 }
