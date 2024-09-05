@@ -158,6 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
             text: habit.name,
             isCompleted: isCompletedToday,
             onChanged: (value) => checkHabitOnOff(value, habit),
+            editHabit: (context) => editHabitBox,
           );
         });
   }
