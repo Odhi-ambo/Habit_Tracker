@@ -22,6 +22,7 @@ class MyHabitTile extends StatelessWidget {
           onPressed: editHabit,
           backgroundColor: Colors.grey,
           icon: Icons.settings,
+          borderRadius: BorderRadius.circular(8),
         ),
         //delete option
       ]),
