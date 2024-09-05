@@ -116,6 +116,43 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   //delete habit
+  void deleteHabitName(Habit habit) {
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              content: TextField(
+                controller: textController,
+              ),
+              actions: [
+                //save button
+                MaterialButton(
+                  onPressed: () {
+                    //get the new habit name
+                    String newHabitName = textController.text;
+
+                    //save to db
+                    context
+                        .read<HabitDatabase>()
+                        .updateHabitName(habit.id, newHabitName);
+                    //pop box
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Save'),
+                ),
+                //cancel button
+                MaterialButton(
+                  onPressed: () {
+                    //pop box
+                    Navigator.pop(context);
+
+                    //clear controller
+                    textController.clear();
+                  },
+                  child: const Text('Cancel'),
+                )
+              ],
+            ));
+  }
 
   @override
   Widget build(BuildContext context) {
