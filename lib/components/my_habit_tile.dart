@@ -14,6 +14,7 @@ class MyHabitTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slidable(
+      endActionPane: ActionPane(motion: StretchMotion(), children: []),
       child: GestureDetector(
         onTap: () {
           if (onChanged != null) {
