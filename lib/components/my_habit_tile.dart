@@ -14,7 +14,10 @@ class MyHabitTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (onChanged != null) {}
+        if (onChanged != null) {
+          //togggle completion status
+          onChanged!(!isCompleted);
+        }
       },
       child: Container(
           decoration: BoxDecoration(
