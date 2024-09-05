@@ -120,16 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              content: TextField(
-                controller: textController,
-              ),
+              title: Text('Are you sure you want to delete?'),
               actions: [
-                //save button
+                //delete button
                 MaterialButton(
                   onPressed: () {
-                    //get the new habit name
-                    String newHabitName = textController.text;
-
                     //save to db
                     context
                         .read<HabitDatabase>()
