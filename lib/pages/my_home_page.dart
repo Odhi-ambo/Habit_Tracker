@@ -96,6 +96,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       .updateHabitName(habit.id, newHabitName);
                   //pop box
                   Navigator.pop(context);
+                }),
+                //cancel button
+                MaterialButton(onPressed: () {
+                  //pop box
+                  Navigator.pop(context);
+
+                  //clear controller
+                  textController.clear();
                 })
               ],
             ));
