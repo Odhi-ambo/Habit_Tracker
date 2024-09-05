@@ -77,6 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
   void editHabitBox(Habit habit) {
     //set the controller's text to habit's current name
     textController.text = habit.name;
+
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              content: TextField(
+                controller: textController,
+              ),
+            ));
   }
 
   //delete habit
