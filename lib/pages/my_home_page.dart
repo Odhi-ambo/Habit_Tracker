@@ -86,25 +86,31 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               actions: [
                 //save button
-                MaterialButton(onPressed: () {
-                  //get the new habit name
-                  String newHabitName = textController.text;
+                MaterialButton(
+                  onPressed: () {
+                    //get the new habit name
+                    String newHabitName = textController.text;
 
-                  //save to db
-                  context
-                      .read<HabitDatabase>()
-                      .updateHabitName(habit.id, newHabitName);
-                  //pop box
-                  Navigator.pop(context);
-                }),
+                    //save to db
+                    context
+                        .read<HabitDatabase>()
+                        .updateHabitName(habit.id, newHabitName);
+                    //pop box
+                    Navigator.pop(context);
+                  },
+                  child: Text('Save'),
+                ),
                 //cancel button
-                MaterialButton(onPressed: () {
-                  //pop box
-                  Navigator.pop(context);
+                MaterialButton(
+                  onPressed: () {
+                    //pop box
+                    Navigator.pop(context);
 
-                  //clear controller
-                  textController.clear();
-                })
+                    //clear controller
+                    textController.clear();
+                  },
+                  child: Text('Cancel'),
+                )
               ],
             ));
   }
