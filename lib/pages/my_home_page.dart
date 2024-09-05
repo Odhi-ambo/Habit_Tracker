@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/components/my_habit_tile.dart';
 import 'package:habit_tracker/database/habit_database.dart';
@@ -71,9 +69,17 @@ class _MyHomePageState extends State<MyHomePage> {
   void checkHabitOnOff(bool? value, Habit habit) {
     //update habit completion status
     if (value != null) {
-      context.read<HabitDatabase>().updateHabitCompletion(habit.id,value);
+      context.read<HabitDatabase>().updateHabitCompletion(habit.id, value);
     }
   }
+
+  //edit habit box
+  void editHabitBox(Habit habit) {
+    //set the controller's text to habit's current name
+    textController.text = habit.name;
+  }
+
+  //delete habit
 
   @override
   Widget build(BuildContext context) {
@@ -115,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
           return MyHabitTile(
             text: habit.name,
             isCompleted: isCompletedToday,
-            onChanged: (value) => checkHabitOnOff(value,habit),
+            onChanged: (value) => checkHabitOnOff(value, habit),
           );
         });
   }
