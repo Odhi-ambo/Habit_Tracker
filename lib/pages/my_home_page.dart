@@ -84,6 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
               content: TextField(
                 controller: textController,
               ),
+              actions: [
+                //save button
+                MaterialButton(onPressed: () {})
+              ],
             ));
   }
 
