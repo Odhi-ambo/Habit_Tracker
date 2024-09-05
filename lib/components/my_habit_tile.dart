@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 class MyHabitTile extends StatelessWidget {
   final bool isCompleted;
-  final text;
+  final String text;
   final void Function(bool?)? onChanged;
-  const MyHabitTile({super.key, required this.isCompleted, required this.text, required this.onChanged});
+  const MyHabitTile(
+      {super.key,
+      required this.isCompleted,
+      required this.text,
+      required this.onChanged});
 
   @override
   Widget build(BuildContext context) {
