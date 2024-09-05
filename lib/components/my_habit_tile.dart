@@ -5,18 +5,23 @@ class MyHabitTile extends StatelessWidget {
   final bool isCompleted;
   final String text;
   final void Function(bool?)? onChanged;
+  final void Function(BuildContext)? editHabit;
   const MyHabitTile(
       {super.key,
       required this.isCompleted,
       required this.text,
-      required this.onChanged});
+      required this.onChanged,
+      required this.editHabit});
 
   @override
   Widget build(BuildContext context) {
     return Slidable(
-      endActionPane: const ActionPane(motion: StretchMotion(), children: [
+      endActionPane: ActionPane(motion: const StretchMotion(), children: [
         //edit option
-
+        SlidableAction(
+          onPressed: editHabit,
+          backgroundColor: Colors.grey,
+        ),
         //delete option
       ]),
       child: GestureDetector(
