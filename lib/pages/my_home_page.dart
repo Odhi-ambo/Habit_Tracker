@@ -186,6 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
             isCompleted: isCompletedToday,
             onChanged: (value) => checkHabitOnOff(value, habit),
             editHabit: (context) => editHabitBox,
+            deleteHabit: (context) => deleteHabitBox,
           );
         });
   }
