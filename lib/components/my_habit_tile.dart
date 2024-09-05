@@ -6,12 +6,14 @@ class MyHabitTile extends StatelessWidget {
   final String text;
   final void Function(bool?)? onChanged;
   final void Function(BuildContext)? editHabit;
+  final void Function(BuildContext)? deleteHabit;
   const MyHabitTile(
       {super.key,
       required this.isCompleted,
       required this.text,
       required this.onChanged,
-      required this.editHabit});
+      required this.editHabit,
+      required this.deleteHabit});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class MyHabitTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         //delete option
+        SlidableAction(onPressed: deleteHabit)
       ]),
       child: GestureDetector(
         onTap: () {
