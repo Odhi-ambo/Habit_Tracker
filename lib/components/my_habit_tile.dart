@@ -13,7 +13,9 @@ class MyHabitTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        if (onChanged != null) {}
+      },
       child: Container(
           decoration: BoxDecoration(
               color: isCompleted
