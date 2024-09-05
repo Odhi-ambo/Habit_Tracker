@@ -23,6 +23,7 @@ class MyHabitTile extends StatelessWidget {
         child: ListTile(
           title: Text(text),
           leading: Checkbox(
+            activeColor: Colors.green,
             value: isCompleted,
             onChanged: onChanged,
           ),
