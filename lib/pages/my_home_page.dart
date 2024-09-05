@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     //pop box
                     Navigator.pop(context);
                   },
-                  child: Text('Save'),
+                  child: const Text('Save'),
                 ),
                 //cancel button
                 MaterialButton(
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     //clear controller
                     textController.clear();
                   },
-                  child: Text('Cancel'),
+                  child: const Text('Cancel'),
                 )
               ],
             ));
