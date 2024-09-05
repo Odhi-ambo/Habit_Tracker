@@ -27,7 +27,12 @@ class MyHabitTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         //delete option
-        SlidableAction(onPressed: deleteHabit)
+        SlidableAction(
+          onPressed: deleteHabit,
+          backgroundColor: Colors.red,
+          icon: Icons.delete,
+          borderRadius: BorderRadius.circular(8),
+        )
       ]),
       child: GestureDetector(
         onTap: () {
