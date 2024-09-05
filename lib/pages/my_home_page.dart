@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   //delete habit
-  void deleteHabitName(Habit habit) {
+  void deleteHabitBox(Habit habit) {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -126,22 +126,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialButton(
                   onPressed: () {
                     //save to db
-                    context
-                        .read<HabitDatabase>()
-                        .updateHabitName(habit.id, newHabitName);
+                    context.read<HabitDatabase>().deleteHabitName(habit.id);
                     //pop box
                     Navigator.pop(context);
                   },
-                  child: const Text('Save'),
+                  child: const Text('Delete'),
                 ),
                 //cancel button
                 MaterialButton(
                   onPressed: () {
                     //pop box
                     Navigator.pop(context);
-
-                    //clear controller
-                    textController.clear();
                   },
                   child: const Text('Cancel'),
                 )
