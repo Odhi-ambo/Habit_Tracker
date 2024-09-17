@@ -150,6 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         elevation: 0,
+        backgroundColor: Colors.transparent,
       ),
       drawer: const Drawer(),
       floatingActionButton: FloatingActionButton(
