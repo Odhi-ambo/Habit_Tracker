@@ -43,6 +43,7 @@ class MyHabitTile extends StatelessWidget {
               onChanged!(!isCompleted);
             }
           },
+          //habit tile
           child: Container(
               decoration: BoxDecoration(
                   color: isCompleted
@@ -52,6 +53,7 @@ class MyHabitTile extends StatelessWidget {
               padding: const EdgeInsets.all(12),
               child: ListTile(
                 title: Text(text),
+                //checkbox
                 leading: Checkbox(
                   activeColor: Colors.green,
                   value: isCompleted,
