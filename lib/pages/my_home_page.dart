@@ -148,7 +148,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      appBar: AppBar(),
+      appBar: AppBar(
+        elevation: 0,
+      ),
       drawer: const Drawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewHabit,
