@@ -14,7 +14,7 @@ class MyDrawer extends StatelessWidget {
         child: CupertinoSwitch(
             value: Provider.of<ThemeProvider>(context).isLightMode,
             onChanged: (value) =>
-                Provider.of<ThemeProvider>(context, listen: false)),
+                Provider.of<ThemeProvider>(context, listen: false).toggleTheme),
       ),
     );
   }
