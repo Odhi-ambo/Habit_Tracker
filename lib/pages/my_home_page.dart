@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habit_tracker/components/my_drawer.dart';
 import 'package:habit_tracker/components/my_habit_tile.dart';
 import 'package:habit_tracker/database/habit_database.dart';
 import 'package:habit_tracker/models/habit.dart';
@@ -153,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      drawer: const Drawer(),
+      drawer: const MyDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewHabit,
         elevation: 0,
