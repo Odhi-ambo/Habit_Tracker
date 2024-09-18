@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: Text('Are you sure you want to delete?'),
+              title: const Text('Are you sure you want to delete?'),
               actions: [
                 //delete button
                 MaterialButton(
