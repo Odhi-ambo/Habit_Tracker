@@ -8,7 +8,7 @@ class MyHeatMap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HeatMap(
-      startDate: ,
+      startDate: startDate,
       colorsets: {
         1: Colors.green.shade200,
         2: Colors.green.shade300,
