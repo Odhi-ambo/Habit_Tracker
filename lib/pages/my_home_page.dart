@@ -159,8 +159,9 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: createNewHabit,
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.tertiary,
-        child: const Icon(
+        child: Icon(
           Icons.add,
+          color: Theme.of(context).colorScheme.onTertiary,
         ),
       ),
       body: _buildHabitList(),
