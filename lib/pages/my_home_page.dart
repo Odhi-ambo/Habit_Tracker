@@ -187,7 +187,9 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (context, snapshot) {
           //once the data is available -> build heatmap
           if (snapshot.hasData) {
-            return MyHeatMap(startDate: snapshot.data!, datasets: datasets);
+            return MyHeatMap(
+                startDate: snapshot.data!,
+                datasets: prepHeatMapDataSet(currentHabits));
           }
           //handle case where no data is returned
           else {
