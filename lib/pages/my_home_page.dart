@@ -164,7 +164,13 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Theme.of(context).colorScheme.onTertiary,
         ),
       ),
-      body: _buildHabitList(),
+      body: ListView(
+        children: [
+          //HEATMAP
+
+          //HABITLIST
+        ],
+      ),
     );
   }
 
