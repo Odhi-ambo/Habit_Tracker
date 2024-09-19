@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/components/my_drawer.dart';
 import 'package:habit_tracker/components/my_habit_tile.dart';
+import 'package:habit_tracker/components/my_heat_map.dart';
 import 'package:habit_tracker/database/habit_database.dart';
 import 'package:habit_tracker/models/habit.dart';
 import 'package:habit_tracker/util/habit_util.dart';
@@ -181,6 +182,19 @@ class _MyHomePageState extends State<MyHomePage> {
       //current habits
       List<Habit> currentHabits = habitDatabase.currentHabits;
       //return heatmap
+      return FutureBuilder<DateTime?>(
+        future: habitDatabase.getFirstLaunchDate(),
+        builder: (context, snapshot) {
+          //once the data is available -> build heatmap
+          if (snapshot.hasData) {
+            return MyHeatMap(startDate: snapshot.data!, datasets: datasets);
+          }
+          //handle case where no data is returned
+          else {
+            return Container();
+          }
+        },
+      );
     }
   }
 
