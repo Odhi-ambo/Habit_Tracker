@@ -212,7 +212,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return ListView.builder(
         itemCount: currentHabits.length,
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           //get each individual habit
           final habit = currentHabits[index];
