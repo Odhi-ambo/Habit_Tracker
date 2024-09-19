@@ -167,11 +167,21 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: [
           //HEATMAP
+          _buildHeatMap(),
 
           //HABITLIST
+          _buildHabitList(),
         ],
       ),
     );
+    //build heatmap
+    Widget _buildHeatMap() {
+      //habit database
+      final habitDatabase = context.watch<HabitDatabase>();
+      //current habits
+      List<Habit> currentHabits = habitDatabase.currentHabits;
+      //return heatmap
+    }
   }
 
 //build habit list
